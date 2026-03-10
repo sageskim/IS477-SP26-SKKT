@@ -1,17 +1,29 @@
 # IS 492 Milestone 2: Project Plan 📝
 
-### Overview
+### 📋 Overview
 
-### Team
+### 👥 Team
 
-### Research or Business Question(s)
+#### Sage Kim
 
-### Datasets
+- Data cleaning and preprocessing
+- Data integration and transformation
+- Visualization and exploratory analysis
+- Documentation and report writing
 
-### Timeline
+#### Kyna Tyagi
 
-### Constraints
+- Data acquisition and dataset preparation
+- Data restructuring (wide to long format)
+- Statistical analysis and interpretation
+- Documentation and report writing
 
-### Gaps
+### 🔎 Research or Business Question(s)
 
-###
+### 📊 Datasets
+
+### 🗓️ Timeline
+
+### ⚠️ Constraints
+
+### 🕳️ Gaps
