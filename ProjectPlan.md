@@ -41,6 +41,63 @@ Our task was to download the GDP per capita dataset from the World Bank and cere
 
 Part 2 of this week's deliverable was outline a clear, structured project plan.
 
+#### Week 3 - Data Storage and Organization
+Task: Organize and document file storage
+ Description: Implement a structured storage system for datasets and scripts. Define naming conventions and folder organization to ensure clarity and reproducibility.
+ Responsible: Both team members
+Organization approach:
+Tabular CSV files for raw data
+Processed datasets stored separately
+Python scripts for data processing 
+
+#### Week 4 -  Data Integration
+Task: Combine datasets into a unified dataset
+ Description: Use Python and Pandas to integrate the two datasets using shared attributes. The datasets will be merged based on country and year identifiers.
+ Responsible:
+Member 1: Data merging implementation
+Member 2: Verification and testing
+
+
+Deliverables:
+Integrated dataset committed 
+
+#### Week 5 – Data Quality Assessment and Cleaning
+Task: Evaluate and clean data
+Description: Assess dataset quality and address issues such as missing values, inconsistent country names, or formatting differences. Cleaning methods may include handling null values, removing duplicates, and editing column names.
+ Responsible: Both team members
+Deliverables:
+Cleaned dataset
+Documentation of data quality issues and fixes
+
+#### Week 6 – Analysis and Workflow Automation
+Task: Perform analysis and automate workflow
+Description: Conduct analysis to explore relationships between cereal production and GDP per capita. Create an automated workflow using Python scripts so the data processing steps can be executed from raw data to final dataset.
+Responsible:
+Member 1: Analysis scripts
+Member 2: Workflow automation
+Deliverables:
+Python scripts for analysis
+Automated data processing workflow
+
+#### Week 7 - Documentation, Metadata, and Reproducibility
+Task: Final documentation and metadata creation
+Description: Write metadata and documentation explaining the datasets, processing steps, and analysis methods. Ensure that another user can reproduce the workflow using the provided instructions and code.
+Responsible: Both team members
+Deliverables:
+Final project report in Markdown
+Metadata describing datasets and variables
+Reproducibility instructions outlined
+
+#### Week 8 – Final Review and Submission
+Task: Final project completion and submission
+Description: Review the repository, verify that all documentation is complete, and ensure the workflow runs correctly from raw data to final results.
+Responsible: Both team members
+Deliverables:
+Final GitHub repository
+Complete documentation and code
+Final project report + presentation!
+
+
 ### ⚠️ Constraints
 
 One of the constraints of these datasets is the difficulty of joining them together. At first, our plan was to join them using the country code column that both datasets have. However, after skimming through the datasets, we found that one dataset uses numeric codes while the other uses alphabet codes. Therefore, an alternative way to join them is by using the country name. However, this approach might not be very smooth either. While both datasets list country names in rows, there are some inconsistent country names. For example, the crop production dataset refers to the U.S. as “United States of America,” while the World Bank dataset calls it “United States.” Furthermore, both datasets have some issues with country entities. For example, the crop production dataset includes two types of names for Mainland China which are “China” and “China, Mainland,” with different numeric area codes, which can be very confusing. Additionally, the World Bank dataset includes some non-country entities in the same column as the list of countries, such as “Africa Eastern and Southern,” “Low & middle income,” and “Not classified.” This dataset also contains many N/A values, which might affect our future analysis. In these ways, the datasets we plan to use are not complete or clean and require some manual cleaning before they can be used.
