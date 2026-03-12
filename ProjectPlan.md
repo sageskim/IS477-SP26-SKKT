@@ -24,7 +24,12 @@ However, the agriculture industry includes many different items from animals to 
 
 ### 🔎 Research or Business Question(s)
 
-### 📊 Datasets
+### 📊 Dataset Description
+Our first dataset comes from the World Bank and contains GDP per capita (in USD) for all countries around the world. This dataset provides yearly economic data for countries around the world and is commonly used as a measure of economic development and average income levels. It includes variables such as country name, year, and GDP per capita. This dataset will allow us to compare economic development levels across countries and examine how they change over time.
+Our second dataset comes from the FAO’s FAOSTAT database and contains cereal production quantity data for crops such as wheat, maize, rice, barley, and other cereals. This dataset reports the amount of cereal production in metric tons for each country and year, from 1961 to 2024. It provides us insight into agricultural productivity and food production levels across countries.
+These two datasets complement each other because they provide different but related types of information. While the World Bank dataset measures worldwide economic development through GDP growth, while the FAO dataset measures worldwide agricultural production. Both datasets include the common variables of country and year, which allows us to later integrate them into a single dataset for analysis.
+By linking the datasets using country and year as shared variables, we will be able to analyze how agricultural production relates to economic development across countries throughout the years. This new and integrated dataset will allow us to analyze whether countries with higher cereal production tend to have higher GDP per capita and whether increases in agricultural production over time are associated with economic growth.
+
 
 ### 🗓️ Timeline
 
