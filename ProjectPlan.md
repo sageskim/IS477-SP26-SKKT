@@ -32,6 +32,14 @@ By linking the datasets using country and year as shared variables, we will be a
 
 
 ### 🗓️ Timeline
+The project will follow the data lifecycle model, beginning with data acquisition and progressing through storage, integration, cleaning, analysis, and documentation. 
+#### Week 1 – Project Setup and Planning
+In this week, our task was  Project planning and repository setup. 
+
+#### Week 2 - Data Collection and Acquisition
+Our task was to download the GDP per capita dataset from the World Bank and cereal production data from the Food and Agriculture Organization FAOSTAT portal. Document dataset sources, formats, and access methods.
+
+Part 2 of this week's deliverable was outline a clear, structured project plan.
 
 ### ⚠️ Constraints
 
