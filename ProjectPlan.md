@@ -1,4 +1,4 @@
-# IS 492 Milestone 2: Project Plan 📝
+# IS 477 Milestone 2: Project Plan 📝
 
 ### 📋 Overview
 
