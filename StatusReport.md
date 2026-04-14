@@ -38,6 +38,7 @@ project-repo/
 └── StatusReport.md
 ```
 ![Workflow Diagram](docs/Workflow.png)
+https://www.figma.com/board/R1xUgZgl0UOdnXB0rTz2XI/Workflow--Copy-?node-id=0-1&t=HXxbMVBX9XDEFLjD-1
 
 #### Week 4 - Data Integration (In Progress)
 Currently, during Week 4, we are merging the FAOSTAT and World Bank datasets using Python and Pandas. We are matching the datasets based on shared country and year identifiers while resolving inconsistencies in formatting and naming conventions.
