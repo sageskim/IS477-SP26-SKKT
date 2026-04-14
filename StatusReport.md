@@ -2,10 +2,10 @@
 
 ### 📋 Task Updates
 
-### Timeline Status
+### 📅 Timeline Status
 
-### Project Plan Changes
+### 🔄 Project Plan Changes
 
-### Challenges & Problems
+### ⚠️ Challenges & Problems
 
-### Team Contributions
+### 👥 Team Contributions
