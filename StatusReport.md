@@ -12,8 +12,8 @@ Artifacts:
 During Week 2, we downloaded the datasets used for our project, including the World Bank GDP per capita dataset and the FAOSTAT cereal production dataset. We also reviewed dataset formatting and developing our project plan.
 
 Artifacts:
-- `/data/raw/API_NY.GDP.PCAP.CD_DS2_en_csv_v2_245 copy.csv`
-- `/data/raw/FAOSTAT_data_en_4-14-2026 copy.csv`
+- `/data/raw/worldbank_gpd_raw.csv`
+- `/data/raw/foastat_cereal_raw.csv`
 - `/ProjectPlan.md`
 
 #### Week 3 - Data Storage and Organization 
