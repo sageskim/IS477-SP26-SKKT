@@ -9,7 +9,7 @@ Artifacts:
 - `/README.md`
 
 #### Week 2 - Data Collection and Acquisition
-During Week 2, we downloaded the datasets used for our project, including the World Bank GDP per capita dataset and the FAOSTAT cereal production dataset. We also reviewed dataset formatting and developing our project plan.
+During Week 2, we downloaded the datasets used for our project, including the World Bank GDP per capita dataset and the FAOSTAT cereal production dataset. We also reviewed dataset formatting, developed our project plan, and documented it in ProjectPlan.md.
 
 Artifacts:
 - `/data/raw/worldbank_gpd_raw.csv`
