@@ -51,4 +51,13 @@ We have been working on tasks during Weeks 1-3 of our project. Week 1 was the pr
 
 ### ⚠️ Challenges & Problems
 
+#### Challenge 1. 
+
+Originally, we planned to join two datasets using a country code. However, we found that these two datasets using different types of country codes; FAO uses numeric code (e.g. Argentina = 32) which is also called Area Code (M49), and World Band uses ISO 3166-1 alpha-3 code (e.g. Argentina = ARG). Since these are two completely different standard, we were not able to join datasets using them. Therefore, we change our method to use country name and year to join these datasets, because both datasets have Country Name and Year data. 
+
+#### Challenge 2. 
+
+When we tried to join them using country name, we noticed that they have different numbers of countries in their datasets. While the FAO dataset contains only 71 countries, the World Bank dataset contains 266 countries. This is because the World Bank dataset includes non-country values such as “Africa Eastern and Southern” or “Low & middle income” under Country Name columns. Furthermore, we found that some countries are listed under different names in the two datasets. For example, while Bolivia is listed as “Bolivia” in World Bank Dataset, it is listed as “Bolivia (Plurinational State of)” in FAO datasets. Therefore, before joining them, we planned to identify different country names across the two datasets and change the values in the FAO dataset to match the country names in the World Bank dataset. After that, we will filter the World Bank dataset to only include countries that exist in the FAO dataset (so that non-country values and unmatched countries are automatically dropped), and finally join these datasets.
+
+
 ### 👥 Team Contributions
