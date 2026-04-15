@@ -20,6 +20,7 @@ Artifacts:
 During Week 3, we organized the repository structure by creating designated folders for raw data, processed data, notebooks, and documentation. We also implemented CSV naming conventions and standardized file storage organization for clarity and reproducibility.
 
 Artifacts:
+- GitHub Repository Structure
 ```text
 project-repo/
 │
@@ -37,9 +38,11 @@ project-repo/
 ├── ProjectPlan.md
 └── StatusReport.md
 ```
+- Workflow Diagram
 ![Workflow Diagram](docs/Workflow.png)
 https://www.figma.com/board/R1xUgZgl0UOdnXB0rTz2XI/Workflow--Copy-?node-id=0-1&t=HXxbMVBX9XDEFLjD-1
-
+- `/notebooks/data_integration.ipynb`
+  
 #### Week 4 - Data Integration (In Progress)
 Currently, during Week 4, we are merging the FAOSTAT and World Bank datasets using Python and Pandas. We are matching the datasets based on shared country and year identifiers while resolving inconsistencies in formatting and naming conventions.
 
@@ -68,6 +71,10 @@ When we tried to join them using country name, we noticed that they have differe
 
 #### Challenge 3. 
 The third challenge we faced is the difference between data formats. While FAO dataset has a long format which has a country, year, and (Production) Value in a one row, World Bank dataset has a wide format which contains all year’s (1960, 1961, …, 2025)  GDP in a row. Therefore, it is impossible to simply join these two datasets, and we need to do “melting,” which converts the World Bank dataset from wide format to long format so that each row can represent one country and only one year.
+
+#### Challenge 4. 
+Another challenge is China. While World Bank Dataset only contains one type of China which is listed as “China,” FAO dataset contains three types of China: “China,” “China, mainland,” and “China, Taiwan Province of.” Since the meanings of these categories were very vague, we conducted a quick exploration, and found that World Bank Dataset’s China means Mainland China, and FAO dataset’s “China” showed basically the same data as Taiwan in the past, but later became the aggregated data of “China, mainland” and “China, Taiwan Province of.” Therefore, we decided not to use “China”  and “China, Taiwan Province of” data since these do not exist in world bank dataset, and map “China, mainland” as “China.”
+
 
 ### 👥 Team Contributions
 
