@@ -63,3 +63,5 @@ When we tried to join them using country name, we noticed that they have differe
 The third challenge we faced is the difference between data formats. While FAO dataset has a long format which has a country, year, and (Production) Value in a one row, World Bank dataset has a wide format which contains all year’s (1960, 1961, …, 2025)  GDP in a row. Therefore, it is impossible to simply join these two datasets, and we need to do “melting,” which converts the World Bank dataset from wide format to long format so that each row can represent one country and only one year.
 
 ### 👥 Team Contributions
+
+Sage -  I developed and organized the GitHub repository structure, creating designated folders for raw data, processed data, notebooks, etc. I also created the project workflow diagram using Figma to visually present our processes and provide clear explanation about our sequences. Furthermore, I conducted initial exploration of both datasets to understand their structures and formats, and identify potential issues and challenges before the actual integration and analysis. For the StatusReport, I covered Task Updates and Challenges & Problems sections.
