@@ -68,4 +68,24 @@ pip install -r requirements.txt
 
 ## References
 
-Formatted citations for any papers, datasets, or software used in your project.
+## References
+
+- Anthropic. (2024). Claude (claude.ai). Used as an AI assistant to support code development and debugging. https://claude.ai
+
+- Food and Agriculture Organization. (2024). FAOSTAT Crops and livestock products dataset. https://www.fao.org/faostat/en/#data/QCL
+
+- Harris, C. R., et al. (2020). NumPy. https://numpy.org
+
+- Hoover, M., & Lucy, L. (2024). How agriculture supports the American economy and Main Street businesses. U.S. Chamber of Commerce. https://www.uschamber.com/security/agriculture-regulations/how-agriculture-supports-the-american-economy-and-main-street-businesses
+
+- Hunter, J. D. (2007). matplotlib. https://matplotlib.org
+
+- McKinney, W. (2010). pandas. https://pandas.pydata.org
+
+- OpenRefine. (2024). OpenRefine (3.x). https://openrefine.org
+
+- Python Software Foundation. (2024). Python (3.x). https://www.python.org
+
+- United States Department of Agriculture. (n.d.). Sustainable agricultural productivity growth: What, why, and how. https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-economist/sustainability/sustainable-productivity-growth-coalition/sustainable-agricultural-productivity-growth-what-why-and-how
+
+- World Bank. (2024). GDP per capita (current US$). https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
