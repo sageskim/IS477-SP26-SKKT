@@ -6,19 +6,28 @@
 
 # ## 0. Load Libraries & Data
 
-# In[26]:
+# In[1]:
 
 
 import pandas as pd
 import numpy as np
 
-fao = pd.read_csv('../data/processed/faostat-cereal-cleaned.csv')
+# Load raw FAO data
+fao = pd.read_csv('../data/raw/faostat_cereal_raw.csv')
 wb  = pd.read_csv('../data/raw/worldbank_gdp_raw.csv', skiprows=4)
+
+# OpenRefine operations (documented in docs/openrefine-history.json)
+
+fao = fao[fao['Flag'] != 'M'].copy()
+
+fao['Area'] = fao['Area'].str.strip()
+
+fao = fao[['Area Code (M49)', 'Area', 'Year', 'Unit', 'Value', 'Flag', 'Flag Description', 'Note']]
 
 
 # ## 1. Explore Dataset
 
-# In[27]:
+# In[2]:
 
 
 print(fao.shape)
@@ -26,7 +35,7 @@ print(fao.dtypes)
 fao.head()
 
 
-# In[28]:
+# In[3]:
 
 
 print(wb.shape)
@@ -36,26 +45,26 @@ wb.head()
 
 # ## 2. Country Name Mapping
 
-# In[29]:
+# In[4]:
 
 
 print('Countries:', wb['Country Name'].nunique())
 print('Countries:', fao['Area'].nunique())
 
 
-# In[30]:
+# In[5]:
 
 
 print(wb['Country Name'].unique())
 
 
-# In[31]:
+# In[6]:
 
 
 print(fao['Area'].unique())
 
 
-# In[32]:
+# In[7]:
 
 
 for name in fao['Area'].unique():
@@ -63,31 +72,31 @@ for name in fao['Area'].unique():
         print(name)
 
 
-# In[33]:
+# In[8]:
 
 
 fao[fao['Area'] == 'China']
 
 
-# In[34]:
+# In[9]:
 
 
 fao[fao['Area'] == 'China, mainland'].head()
 
 
-# In[35]:
+# In[10]:
 
 
 fao[fao['Area'] == 'China, Taiwan Province of']
 
 
-# In[36]:
+# In[11]:
 
 
 wb[wb['Country Name'] == 'China']
 
 
-# In[37]:
+# In[12]:
 
 
 country_name_map = {
@@ -104,7 +113,7 @@ country_name_map = {
 
 # ## 3. Clean FAO Dataset
 
-# In[38]:
+# In[13]:
 
 
 drop_countries = ['China', 'China, Taiwan Province of', 'Czechoslovakia', 'Ethiopia PDR', 'USSR']
@@ -120,7 +129,7 @@ fao_clean
 
 # ## 4. Reshape World Bank Dataset (Wide -> Long)
 
-# In[39]:
+# In[14]:
 
 
 year_cols = [c for c in wb.columns if c.isdigit()]
@@ -141,7 +150,7 @@ wb_long
 
 # ## 5. Merge Datasets
 
-# In[40]:
+# In[15]:
 
 
 merged = pd.merge(
@@ -159,7 +168,7 @@ merged
 
 # ## 6. Check Merged Dataset
 
-# In[41]:
+# In[16]:
 
 
 print('Missing values:')
@@ -173,7 +182,7 @@ print((merged['Country'].unique()))
 
 # ## 7. Save Merged Dataset
 
-# In[42]:
+# In[17]:
 
 
 merged.to_csv('../data/processed/merged_cereal_gdp.csv', index=False)
