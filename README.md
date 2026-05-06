@@ -34,7 +34,9 @@
 
 ## Reproducing
 
-### 1. Data Acquisition
+There are two ways to reproduce this project: 1. Running each notebook manually, or 2. using Snakemake to automate the entire workflow.
+
+### Step 1: Data Acquisition (required for both methods)
 Both datasets must be manually downloaded as programmatic access is not supported.
 
 **FAO Cereal Production Dataset**
@@ -48,30 +50,33 @@ Both datasets must be manually downloaded as programmatic access is not supporte
 2. Download as CSV
 3. Save to `data/raw/worldbank_gdp_raw.csv`
 
-**Integrity Check**
-Run `notebooks/data_profiling.ipynb` to verify file checksums stored in `data/raw/checksums.txt`
-
----
-
-### 2. Run Notebooks in Order
-1. `notebooks/data_profiling.ipynb` — SHA-256 checksum verification and data quality assessment
-2. `notebooks/data_integration.ipynb` — Data cleaning and integration → outputs `data/processed/merged_cereal_gdp.csv`
-3. `notebooks/data_analysis.ipynb` — Analysis and visualizations → outputs saved to `analysis/`
-
----
-
-### 3. Software Dependencies
-Install required packages:
+### Step 2: Install Required Software (required for both methods)
 ```bash
 pip install -r requirements.txt
 ```
 
+### Option A: Run Notebooks Manually
+1. `notebooks/data_profiling.ipynb` — SHA-256 checksum verification and data quality assessment
+2. `notebooks/data_integration.ipynb` — Data cleaning and integration
+3. `notebooks/data_analysis.ipynb` — Analysis and visualizations
+
+### Option B: Automated Workflow with Snakemake
+```bash
+pip install snakemake
+snakemake --cores 1
+```
+
 ## References
 
-- Anthropic. (2024). Claude (claude.ai). Used as an AI assistant to support code development and debugging. https://claude.ai
+#### Datasets
 
 - Food and Agriculture Organization. (2024). FAOSTAT Crops and livestock products dataset. https://www.fao.org/faostat/en/#data/QCL
+- World Bank. (2024). GDP per capita (current US$). https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
 
+#### Papers / Software
+
+- Anthropic. (2024). Claude (claude.ai). Used as an AI assistant to support code development and debugging. https://claude.ai
+  
 - Harris, C. R., et al. (2020). NumPy. https://numpy.org
 
 - Hoover, M., & Lucy, L. (2024). How agriculture supports the American economy and Main Street businesses. U.S. Chamber of Commerce. https://www.uschamber.com/security/agriculture-regulations/how-agriculture-supports-the-american-economy-and-main-street-businesses
@@ -86,4 +91,4 @@ pip install -r requirements.txt
 
 - United States Department of Agriculture. (n.d.). Sustainable agricultural productivity growth: What, why, and how. https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-economist/sustainability/sustainable-productivity-growth-coalition/sustainable-agricultural-productivity-growth-what-why-and-how
 
-- World Bank. (2024). GDP per capita (current US$). https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+
