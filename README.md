@@ -68,8 +68,6 @@ pip install -r requirements.txt
 
 ## References
 
-## References
-
 - Anthropic. (2024). Claude (claude.ai). Used as an AI assistant to support code development and debugging. https://claude.ai
 
 - Food and Agriculture Organization. (2024). FAOSTAT Crops and livestock products dataset. https://www.fao.org/faostat/en/#data/QCL
