@@ -15,13 +15,13 @@ def get_sha256(filepath):
     with open(filepath, 'rb') as f:
         return hashlib.sha256(f.read()).hexdigest()
 
-fao_hash = get_sha256('../data/raw/faostat_cereal_raw.csv')
-wb_hash  = get_sha256('../data/raw/worldbank_gdp_raw.csv')
+fao_hash = get_sha256('data/raw/faostat_cereal_raw.csv')
+wb_hash  = get_sha256('data/raw/worldbank_gdp_raw.csv')
 
 print('faostat_cereal_raw.csv :', fao_hash)
 print('worldbank_gdp_raw.csv  :', wb_hash)
 
-with open('../data/raw/checksums.txt', 'w') as f:
+with open('data/raw/checksums.txt', 'w') as f:
     f.write(f'{fao_hash}  faostat_cereal_raw.csv\n')
     f.write(f'{wb_hash}  worldbank_gdp_raw.csv\n')
 
@@ -32,8 +32,8 @@ with open('../data/raw/checksums.txt', 'w') as f:
 import pandas as pd
 import matplotlib.pyplot as plt
 
-fao = pd.read_csv('../data/raw/faostat_cereal_raw.csv')
-wb  = pd.read_csv('../data/raw/worldbank_gdp_raw.csv', skiprows=4)
+fao = pd.read_csv('data/raw/faostat_cereal_raw.csv')
+wb  = pd.read_csv('data/raw/worldbank_gdp_raw.csv', skiprows=4)
 
 
 # ---

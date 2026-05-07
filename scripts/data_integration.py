@@ -13,8 +13,8 @@ import pandas as pd
 import numpy as np
 
 # Load raw FAO data
-fao = pd.read_csv('../data/raw/faostat_cereal_raw.csv')
-wb  = pd.read_csv('../data/raw/worldbank_gdp_raw.csv', skiprows=4)
+fao = pd.read_csv('data/raw/faostat_cereal_raw.csv')
+wb  = pd.read_csv('data/raw/worldbank_gdp_raw.csv', skiprows=4)
 
 # OpenRefine operations (documented in docs/openrefine-history.json)
 
@@ -185,5 +185,5 @@ print((merged['Country'].unique()))
 # In[17]:
 
 
-merged.to_csv('../data/processed/merged_cereal_gdp.csv', index=False)
+merged.to_csv('data/processed/merged_cereal_gdp.csv', index=False)
 

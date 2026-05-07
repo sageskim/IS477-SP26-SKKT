@@ -18,7 +18,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-df = pd.read_csv('../data/processed/merged_cereal_gdp.csv')
+df = pd.read_csv('data/processed/merged_cereal_gdp.csv')
 
 print('Shape:', df.shape)
 print('Countries:', df['Country'].nunique())
@@ -46,7 +46,7 @@ plt.xlabel('Cereal Production (tonnes)')
 plt.ylabel('GDP per Capita (USD)')
 plt.title('Cereal Production vs GDP per Capita (1961-2024)')
 plt.tight_layout()
-plt.savefig('../analysis/q1_scatter.png', dpi=150, bbox_inches='tight')
+plt.savefig('analysis/q1_scatter.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 
@@ -80,7 +80,7 @@ plt.ylabel('Average GDP per Capita (USD)')
 plt.title('Average GDP per Capita: High vs Low Cereal Production Countries')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig('../analysis/q2_bar.png', dpi=150, bbox_inches='tight')
+plt.savefig('analysis/q2_bar.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 
@@ -113,7 +113,7 @@ ax2.set_ylabel('Avg GDP per Capita (USD)', color='darkorange')
 plt.title('Global Trends: Cereal Production and GDP per Capita (1961-2024)')
 fig.legend(loc='upper left', bbox_to_anchor=(0.1, 0.9))
 plt.tight_layout()
-plt.savefig('../analysis/q3_trend.png', dpi=150, bbox_inches='tight')
+plt.savefig('analysis/q3_trend.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 
