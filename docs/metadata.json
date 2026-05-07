@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Cereal Production and GDP per Capita (1961-2024)",
+  "description": "An integrated dataset combining FAO cereal production data and World Bank GDP per capita data for 64 countries from 1961 to 2024, created to explore the relationship between agricultural output and economic development.",
+  "url": "https://github.com/sageskim/IS477-SP26-SKKT",
+  "identifier": "https://github.com/sageskim/IS477-SP26-SKKT",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Sage Kim"
+    },
+    {
+      "@type": "Person",
+      "name": "Kyna Tyagi"
+    }
+  ],
+  "dateCreated": "2026",
+  "dateModified": "2026",
+  "license": "https://opensource.org/licenses/MIT",
+  "keywords": [
+    "cereal production",
+    "GDP per capita",
+    "agriculture",
+    "economic development",
+    "FAOSTAT",
+    "World Bank"
+  ],
+  "temporalCoverage": "1961/2024",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Global (64 countries)"
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Cereal_Production_Value",
+      "description": "Total cereal production in metric tonnes",
+      "unitCode": "TNE"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "GDP_per_capita_USD",
+      "description": "GDP per capita in current US dollars",
+      "unitCode": "USD"
+    }
+  ],
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "FAOSTAT Crops and Livestock Products",
+      "url": "https://www.fao.org/faostat/en/#data/QCL",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Food and Agriculture Organization of the United Nations"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "GDP per capita (current US$)",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD",
+      "publisher": {
+        "@type": "Organization",
+        "name": "World Bank"
+      }
+    }
+  ],
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "CSV",
+    "contentUrl": "https://github.com/sageskim/IS477-SP26-SKKT/blob/main/data/processed/merged_cereal_gdp.csv"
+  }
+}
