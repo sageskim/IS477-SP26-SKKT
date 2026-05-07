@@ -19,7 +19,7 @@ rule integration:
     input:
         "data/raw/faostat_cereal_raw.csv",
         "data/raw/worldbank_gdp_raw.csv"
-	"data/raw/checksums.txt"
+        "data/raw/checksums.txt"
     output:
         "data/processed/merged_cereal_gdp.csv"
     shell:
