@@ -1,0 +1,54 @@
+# Data Dictionary
+# IS 477 Course Project - Cereal Production and Economic Development
+# Team: Sage Kim, Kyna Tyagi
+
+=============================================================
+DATASET 1: faostat_cereal_raw.csv
+Location: data/raw/faostat_cereal_raw.csv
+Source: Food and Agriculture Organization (FAO) FAOSTAT
+=============================================================
+
+Domain Code     : FAO domain code (QCL = Crops and Livestock Products)
+Domain          : Name of the FAO domain
+Area Code (M49) : Numeric country code following the UN M49 standard
+Area            : Country name
+Year            : Year of observation (1961-2024)
+Unit            : Unit of measurement (t = metric tonnes)
+Value           : Cereal production quantity in metric tonnes
+Flag            : FAO data quality indicator
+                    A = Official figure
+                    E = Estimated value
+                    I = Value imputed by a receiving agency
+                    X = Figure from external organization
+                    M = Missing value; data cannot exist
+Flag Description: Full text description of the Flag value
+Note            : Additional notes (e.g., "Unofficial figure")
+
+=============================================================
+DATASET 2: worldbank_gdp_raw.csv
+Location: data/raw/worldbank_gdp_raw.csv
+Source: World Bank, GDP per capita (current US$)
+=============================================================
+
+Country Name    : Name of the country or region entity
+Country Code    : ISO 3166-1 alpha-3 country code (e.g., ARG, USA)
+Indicator Name  : Name of the indicator (GDP per capita, current US$)
+Indicator Code  : World Bank indicator code (NY.GDP.PCAP.CD)
+1960-2025       : GDP per capita value in current US dollars for each year
+
+Note: This dataset is in wide format. Each year is a separate column.
+Non-country entities (e.g., "Africa Eastern and Southern", "Low & middle income")
+are included in the raw data but removed during integration.
+
+=============================================================
+DATASET 3: merged_cereal_gdp.csv
+Location: data/processed/merged_cereal_gdp.csv
+Source: Integrated from FAOSTAT and World Bank datasets
+=============================================================
+
+Country              : Country name (standardized to World Bank naming conventions)
+Year                 : Year of observation (1961-2024)
+Cereal_Production_Value : Total cereal production in metric tonnes
+Flag                 : FAO data quality indicator (see DATASET 1 for values)
+Flag_Description     : Full text description of the Flag value
+GDP_per_capita_USD   : GDP per capita in current US dollars
